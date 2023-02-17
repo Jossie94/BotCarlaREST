@@ -20,8 +20,8 @@ namespace BotCarlaREST.Models
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=JOSSAN\SQLEXPRESS;Database=Carla;Trusted_Connection=True;");
-            // You don't actually ever need to call this
+            optionsBuilder.UseSqlServer(@"Server=JOSSAN\SQLEXPRESS;Database=BotCarla;Trusted_Connection=True;");
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

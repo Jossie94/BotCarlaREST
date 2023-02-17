@@ -30,16 +30,11 @@ namespace BotCarlaREST
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            var ConnectionString = @"Server=JOSSAN\SQLEXPRESS; Database=Carla;Trusted_Connection=True; ";
-            //@"server=VISTI\SQLEXPRESS; Database=BiografApiData; Trusted_Connection=true";
+            var ConnectionString = @"Server=JOSSAN\SQLEXPRESS; Database=BotCarla;Trusted_Connection=True; ";
+           
 
             services.AddDbContext<Datasql>(option => option.UseSqlServer(ConnectionString));
-            //services.AddControllers();
-            // dette sørger for vi ikke får uendeligt loop
-
-
-
-
+            
 
 
             services.AddSwaggerGen(c =>
